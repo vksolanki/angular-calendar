@@ -1,0 +1,43 @@
+
+
+.calendar {
+    border: 1px solid #e4e4e4;
+    font-family: 'Open Sans', sans-serif;
+    background: var(--color2);
+    box-shadow: 3px 3px 3px 2px #f5f5f5;
+}
+
+.cal-monthyear {
+    text-align: center;
+    font-weight: 600;
+}
+
+.cal-cell {
+    text-align: center;
+    width: 3rem;
+    border: 1px solid #efefef;
+    height: 3rem;
+    transition: all 0.5s;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cal-cell.selected {
+    background-color: var(--color1);
+    color: var(--color2);
+}
+
+.cal-btn-nav {
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: var(--color1);
+}
+
+.cal-btn-nav i {
+    color:var(--color1);
+}
+
+td.cal-head-cell {
+    text-align: center;
+}

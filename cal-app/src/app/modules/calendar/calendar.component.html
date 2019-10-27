@@ -1,0 +1,37 @@
+<table class="calendar">
+    <thead>
+        <tr>
+            <td style="text-align: left;">
+                <button class="cal-btn-nav" (click)="movePrev()">
+                    <i class="fas fa-arrow-circle-left"></i>
+                </button>
+            </td>
+            <td colspan="5" class="cal-monthyear">
+                {{calendarVM.calendarData.currentMonthStr}} -
+                {{calendarVM.calendarData.currentYear}}
+            </td>
+            <td style="text-align: right;">
+                <button class="cal-btn-nav" (click)="moveNext()">
+                    <i class="fas fa-arrow-circle-right"></i>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td class="cal-head-cell">SUN</td>
+            <td class="cal-head-cell">MON</td>
+            <td class="cal-head-cell">TUE</td>
+            <td class="cal-head-cell">WED</td>
+            <td class="cal-head-cell">THU</td>
+            <td class="cal-head-cell">FRI</td>
+            <td class="cal-head-cell">SAT</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of calendarVM.days;let row = index">
+            <td (click)="onDateSelected(day)" class="cal-cell" [class.selected]="day.selected"
+                *ngFor="let day of item; let col=index">
+                {{day.date|date:'dd'}}
+            </td>
+        </tr>
+    </tbody>
+</table>
